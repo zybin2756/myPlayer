@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zyb.myplayer.utils.MarqueeTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:text="@string/title"
+        android:id="@+id/play_title"
+        android:gravity="center_horizontal"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="@android:color/tertiary_text_light"
+        android:maxLines="1" />
+    <com.zyb.myplayer.utils.MarqueeTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/play_title"
+        android:text="@string/singer"
+        android:gravity="center_horizontal"
+        android:id="@+id/play_singer"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="@android:color/tertiary_text_light"
+        android:maxLines="1" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/music"
+            android:layout_centerInParent="true"
+            android:id="@+id/imageView"
+            android:contentDescription="@string/ablum"></ImageView>
+</RelativeLayout>

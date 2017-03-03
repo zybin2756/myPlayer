@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:drawSelectorOnTop="true"
+        android:fastScrollEnabled="true"
+        android:id="@+id/musicList"
+        android:layout_weight="1"
+        android:groupIndicator="@null"
+
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:background="#33000000"
+        android:id="@+id/line_play">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@mipmap/music"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/imgAblum"/>
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgAblum">
+            <com.zyb.myplayer.utils.MarqueeTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="歌名:"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="1"
+                android:id="@+id/pTitle"
+                android:maxLines="1" />
+            <com.zyb.myplayer.utils.MarqueeTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="歌手:"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="1"
+                android:id="@+id/pSinger"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/playorpause"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/next"
+            android:background="@mipmap/play"/>
+
+        <ImageButton
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:id="@+id/next"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/next"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <SeekBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekbar_music"
+            android:maxHeight="28dp"
+            android:minWidth="28dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="00:00"
+            android:id="@+id/pgb_time"/>
+    </LinearLayout>
+</LinearLayout>
